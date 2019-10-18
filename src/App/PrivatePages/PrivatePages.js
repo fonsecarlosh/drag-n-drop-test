@@ -6,12 +6,12 @@ import './PrivatePages.scss';
 function PrivatePages({
   component: Component, logged, menu, loadLogout, ...rest
 }) {
+  logged = true;
   return (
     <Route
       {...rest}
       render={props => (logged ? (
         <div className="private-pages">
-          <h1>Private Pages</h1>
           <div className="private-pages-content">
             <Component {...props} />
           </div>
